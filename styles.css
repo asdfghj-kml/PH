@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* Degraded background from yellow to green */
+    background: linear-gradient(135deg, #dbd7cc 0%, #f7b95c 100%);
+    font-family: 'Aptos', Arial, sans-serif;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.image-row img,
+.image-vignette img {
+    width: 180px; /* Increase this value for bigger images */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 30px 10px rgba(0,0,0,0.4) inset;
+}
+
+.image-vignette {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Aptos', Arial, sans-serif;
+}
+
+/* Caption uses alt text, so set font here */
+.caption {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Aptos', Arial, sans-serif;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 20px 0;
+}
+
+.logo-footer img {
+    max-width: 180px;
+}
+
+@media (max-width: 600px) {
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-vignette {
+        margin-bottom: 20px;
+    }
+}
